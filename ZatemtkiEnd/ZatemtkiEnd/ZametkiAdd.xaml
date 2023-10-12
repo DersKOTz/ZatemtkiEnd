@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZatemtkiEnd.ZametkiAdd"  Title="Добавить запись">
+    <StackLayout>
+        <Label Text="Название:" />
+        <Entry Text="{Binding Nazv}" />
+        <Label Text="Описание:" />
+        <Entry Text="{Binding Opis}" />
+        <Label Text="Дата начала:" />
+        <Entry Text="{Binding Nach}" />
+        <Label Text="Срок выполнения:" />
+        <Entry Text="{Binding Sroc}" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Сохранить" Clicked="Save" />
+            <Button Text="Удалить" Clicked="Delete" />
+            
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
