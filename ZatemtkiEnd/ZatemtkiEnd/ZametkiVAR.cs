@@ -13,7 +13,11 @@ namespace ZatemtkiEnd
 
         public string Nazv { get; set; }
         public string Opis { get; set; }
-        public string Nach { get; set; }
+        public DateTime Nach { get; set; }
         public string Sroc { get; set; }
+        public bool Swi { get; set; }
+
     }
 }
+
+

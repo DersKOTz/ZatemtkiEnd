@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Globalization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace ZatemtkiEnd
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ZametkiAdd : ContentPage
     {
+
         public ZametkiAdd()
         {
-            InitializeComponent();
+            InitializeComponent();       
         }
         private void Save(object sender, EventArgs e)
         {

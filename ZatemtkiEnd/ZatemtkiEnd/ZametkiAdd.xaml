@@ -1,20 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ZatemtkiEnd.ZametkiAdd"  Title="Добавить запись">
+<ContentPage
+    x:Class="ZatemtkiEnd.ZametkiAdd"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Добавить запись">
+
     <StackLayout>
-        <Label Text="Название:" />
-        <Entry Text="{Binding Nazv}" />
-        <Label Text="Описание:" />
-        <Entry Text="{Binding Opis}" />
-        <Label Text="Дата начала:" />
-        <Entry Text="{Binding Nach}" />
-        <Label Text="Срок выполнения:" />
+        <Label FontSize="Medium" Text="Название:" />
+        <Editor AutoSize="TextChanges" Text="{Binding Nazv}" />
+
+        <Label FontSize="Medium" Text="Описание:" />
+        <Editor AutoSize="TextChanges" Text="{Binding Opis}" />
+
+        <Label FontSize="Medium" Text="Дата начала:" />
+        <DatePicker Date="{Binding Nach}" Format="D">
+            <DatePicker.MinimumDate>10/1/2023</DatePicker.MinimumDate>
+        </DatePicker>
+
+        <Label FontSize="Medium" Text="Срок выполнения:" />
         <Entry Text="{Binding Sroc}" />
+
+        <StackLayout>
+            <Label>
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Text" Value="Статус: В процессе" />
+                        <Setter Property="FontSize" Value="Medium" />
+                        <Setter Property="TextColor" Value="Red" />
+                        <Style.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Swi}"
+                                TargetType="Label"
+                                Value="True">
+                                <Setter Property="Text" Value="Статус: Завершено" />
+                                <Setter Property="TextColor" Value="Green" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Label.Style>
+            </Label>
+
+            <Switch HorizontalOptions="Start" IsToggled="{Binding Swi}">
+                <Switch.Style>
+                    <Style TargetType="Switch">
+                        <Setter Property="ThumbColor" Value="Red" />
+                        <Style.Triggers>
+                            <DataTrigger
+                                Binding="{Binding Swi}"
+                                TargetType="Switch"
+                                Value="True">
+                                <Setter Property="ThumbColor" Value="Green" />
+                                <Setter Property="OnColor" Value="Chartreuse" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Switch.Style>
+            </Switch>
+
+        </StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Button Text="Сохранить" Clicked="Save" />
-            <Button Text="Удалить" Clicked="Delete" />
-            
+            <Button Clicked="Save" Text="Сохранить" BorderRadius="10" BackgroundColor="#19b2e6"/>
+            <Button Clicked="Delete" Text="Удалить" BorderRadius="10" BackgroundColor="#19b2e6"/>
+
         </StackLayout>
     </StackLayout>
 </ContentPage>

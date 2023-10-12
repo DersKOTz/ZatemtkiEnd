@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
+using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,6 +29,9 @@ namespace ZatemtkiEnd
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+            var culture = new CultureInfo("ru-RU");
+            Thread.CurrentThread.CurrentCulture = culture;
+            Thread.CurrentThread.CurrentUICulture = culture;
         }
         protected override void OnStart()
         {
