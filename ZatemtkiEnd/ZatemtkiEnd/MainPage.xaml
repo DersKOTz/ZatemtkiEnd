@@ -48,9 +48,9 @@
         <Button
             BackgroundColor="#19b2e6"
             Clicked="CreateZametki"
-            CornerRadius="10"
+            CornerRadius="15"
             FontSize="Large"
-            Text="Добавить" />
+            Text="Добавить" Margin="5,8,5,5"/>
 
     </StackLayout>
 </ContentPage>

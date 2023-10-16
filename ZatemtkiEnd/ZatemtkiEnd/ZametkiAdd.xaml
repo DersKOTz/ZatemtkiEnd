@@ -6,22 +6,43 @@
     Title="Добавить запись">
 
     <StackLayout>
-        <Label Margin="10,10,0,0" FontSize="Medium" Text="Название:" />
-        <Editor Margin="8,0,0,0" AutoSize="TextChanges" Text="{Binding Nazv}" />
+        <Label
+            Margin="10,10,0,0"
+            FontSize="Medium"
+            Text="Название:" />
+        <Editor
+            Margin="8,0,0,0"
+            AutoSize="TextChanges"
+            Text="{Binding Nazv}" />
 
-        <Label Margin="10,0,0,0" FontSize="Medium" Text="Описание:" />
-        <Editor Margin="8,0,0,0" AutoSize="TextChanges" Text="{Binding Opis}" />
+        <Label
+            Margin="10,0,0,0"
+            FontSize="Medium"
+            Text="Описание:" />
+        <Editor
+            Margin="8,0,0,0"
+            AutoSize="TextChanges"
+            Text="{Binding Opis}" />
 
-        <Label Margin="10,0,0,0" FontSize="Medium" Text="Дата начала:" />
-        <DatePicker Margin="8,0,0,0" Date="{Binding Nach}" Format="D">
+        <Label
+            Margin="10,0,0,0"
+            FontSize="Medium"
+            Text="Дата начала:" />
+        <DatePicker
+            Margin="8,0,0,0"
+            Date="{Binding Nach}"
+            Format="D">
             <DatePicker.MinimumDate>10/1/2023</DatePicker.MinimumDate>
         </DatePicker>
 
-        <Label Margin="10,0,0,0" FontSize="Medium" Text="Срок выполнения:" />
+        <Label
+            Margin="10,0,0,0"
+            FontSize="Medium"
+            Text="Срок выполнения:" />
         <Entry Margin="8,0,0,0" Text="{Binding Sroc}" />
 
         <StackLayout>
-            <Label Margin="10,0,0,0" x:Name="StatusLabel">
+            <Label x:Name="StatusLabel" Margin="10,0,0,0">
                 <Label.Style>
                     <Style TargetType="Label">
                         <Setter Property="Text" Value="Статус: В процессе" />
@@ -40,7 +61,12 @@
                 </Label.Style>
             </Label>
 
-            <Switch x:Name="SwitchAdd" Margin="10,0,0,0" HorizontalOptions="Start" IsToggled="{Binding Swi}" Toggled="SaveSwitch">
+            <Switch
+                x:Name="SwitchAdd"
+                Margin="10,0,0,0"
+                HorizontalOptions="Start"
+                IsToggled="{Binding Swi}"
+                Toggled="SaveSwitch">
                 <Switch.Style>
                     <Style TargetType="Switch">
                         <Setter Property="ThumbColor" Value="Red" />
@@ -59,8 +85,19 @@
 
         </StackLayout>
         <StackLayout Orientation="Horizontal">
-            <Button Margin="10,0,0,0" Clicked="Save" Text="Сохранить" CornerRadius="10" BackgroundColor="#19b2e6"/>
-            <Button Clicked="Delete" Text="Удалить" CornerRadius="10" BackgroundColor="#19b2e6"/>
+            <Button
+                Margin="10,0,0,0"
+                BackgroundColor="#19b2e6"
+                Clicked="Save"
+                CornerRadius="12"
+                FontSize="Medium"
+                Text="Сохранить" />
+            <Button
+                BackgroundColor="#19b2e6"
+                Clicked="Delete"
+                CornerRadius="12"
+                FontSize="Medium"
+                Text="Удалить" />
 
         </StackLayout>
     </StackLayout>
