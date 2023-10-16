@@ -13,7 +13,7 @@ namespace ZatemtkiEnd
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ZametkiAdd : ContentPage
     {
-
+        
         public ZametkiAdd()
         {
             InitializeComponent();       
@@ -37,5 +37,27 @@ namespace ZatemtkiEnd
         {
             this.Navigation.PopAsync();
         }
+        public void SaveSwitch(object sender, EventArgs e)
+        {
+            var Zametkivar = (ZametkiVAR)BindingContext;
+            if (!String.IsNullOrEmpty(Zametkivar.Nazv))
+            {
+                App.Database.SaveItem(Zametkivar);
+            }
+
+            if (SwitchAdd.IsToggled)
+            {
+                StatusLabel.Text = "Статус: Завершено";
+                StatusLabel.TextColor = Color.Green;
+                SwitchAdd.ThumbColor = Color.Green;
+                SwitchAdd.OnColor = Color.Chartreuse;
+            }
+            else
+            {
+                StatusLabel.Text = "Статус: В процессе";
+                StatusLabel.TextColor = Color.Red;
+                SwitchAdd.ThumbColor = Color.Red;
+            }          
+        }                  
     }
 }

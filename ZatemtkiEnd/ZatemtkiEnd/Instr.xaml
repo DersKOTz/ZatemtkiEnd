@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ZatemtkiEnd.Instr"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Руководство пользователя">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Margin="30,10,0,0"
+                FontSize="24"
+                Text="Создание записи:" />
+            <Label Margin="30,0,0,20" FontSize="20">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="1) Для создания записи необходимо нажать на кнопку 'ДОБАВИТЬ'." />
+                        <Span Text="&#x0a;" />
+                        <Span Text="2) Ввести данные, выбрать дату." />
+                        <Span Text="&#x0a;" />
+                        <Span Text="3) Нажать на кнопку 'Сохранить'." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label
+                Margin="30,10,0,0"
+                FontSize="24"
+                Text="Редактирование записи:" />
+            <Label Margin="30,0,0,20" FontSize="20">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="1) Для изменения записи необходимо выбрать запись." />
+                        <Span Text="&#x0a;" />
+                        <Span Text="2) Изменить данные." />
+                        <Span Text="&#x0a;" />
+                        <Span Text="3) Выбрать статус." />
+                        <Span Text="&#x0a;" />
+                        <Span Text="4) Нажать на кнопку 'Сохранить'." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label
+                Margin="30,10,0,0"
+                FontSize="24"
+                Text="Удаление записи:" />
+            <Label Margin="30,0,0,20" FontSize="20">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="1) Для удаления записи необходимо выбрать запись." />
+                        <Span Text="&#x0a;" />
+                        <Span Text="2) Нажать на кнопку 'Удалить'." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -28,7 +28,7 @@ namespace ZatemtkiEnd
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new Glav());
             var culture = new CultureInfo("ru-RU");
             Thread.CurrentThread.CurrentCulture = culture;
             Thread.CurrentThread.CurrentUICulture = culture;

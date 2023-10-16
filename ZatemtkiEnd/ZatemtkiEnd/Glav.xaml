@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ZatemtkiEnd.Glav"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Главная">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image
+                Margin="0,15,0,0"
+                HeightRequest="370"
+                Source="https://avatars.mds.yandex.net/get-images-cbir/4565224/4hy0NW0tm09-oFoszdRZIg2243/ocr"
+                WidthRequest="270" />
+            <Label
+                Margin="30,10,0,0"
+                FontSize="24"
+                Text="Начни записывать сейчас!" />
+            <Label Margin="30,0,0,20" FontSize="18">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Запиши свои задачи и начни выполнять" />
+                        <Span Text="&#x0a;" />
+                        <Span Text="их прямо сейчас. Добавляй, удаляй," />
+                        <Span Text="&#x0a;" />
+                        <Span Text="изменяй когда захочешь. Просто попробуй!" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Button
+                BackgroundColor="#19b2e6"
+                Clicked="OnButtonClicked"
+                CornerRadius="20"
+                FontSize="20"
+                HeightRequest="65"
+                HorizontalOptions="Center"
+                Text="НАЧНИ СЕЙЧАС!"
+                WidthRequest="350" />
+
+            <Label
+                Margin="30,10,0,0"
+                FontSize="24"
+                Text="Больше информации ↓" />
+            <Button
+                BackgroundColor="#19b2e6"
+                Clicked="OnButtonClickedInfo"
+                CornerRadius="20"
+                FontSize="20"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Text="ТУТ!"
+                WidthRequest="200" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
