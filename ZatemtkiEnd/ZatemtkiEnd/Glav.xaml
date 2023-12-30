@@ -9,8 +9,8 @@
         <StackLayout>
             <Image
                 Margin="0,15,0,0"
-                HeightRequest="370"
-                Source="https://avatars.mds.yandex.net/get-images-cbir/4565224/4hy0NW0tm09-oFoszdRZIg2243/ocr"
+                HeightRequest="350"
+                Source=" // "
                 WidthRequest="270" />
             <Label
                 Margin="30,10,0,0"
@@ -33,7 +33,7 @@
                 Clicked="OnButtonClicked"
                 CornerRadius="20"
                 FontSize="20"
-                HeightRequest="65"
+                HeightRequest="55"
                 HorizontalOptions="Center"
                 Text="НАЧНИ СЕЙЧАС!"
                 WidthRequest="350" />

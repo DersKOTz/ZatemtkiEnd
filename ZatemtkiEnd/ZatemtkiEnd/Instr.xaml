@@ -28,11 +28,11 @@
             <Label Margin="30,0,0,20" FontSize="20">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="1) Для изменения записи необходимо выбрать запись." />
+                        <Span Text="1) Для изменения записи необходимо открыть запись." />
                         <Span Text="&#x0a;" />
                         <Span Text="2) Изменить данные." />
                         <Span Text="&#x0a;" />
-                        <Span Text="3) Выбрать статус." />
+                        <Span Text="3) Изменить статус." />
                         <Span Text="&#x0a;" />
                         <Span Text="4) Нажать на кнопку 'Сохранить'." />
                     </FormattedString>
@@ -45,7 +45,7 @@
             <Label Margin="30,0,0,20" FontSize="20">
                 <Label.FormattedText>
                     <FormattedString>
-                        <Span Text="1) Для удаления записи необходимо выбрать запись." />
+                        <Span Text="1) Для удаления записи необходимо открыть запись." />
                         <Span Text="&#x0a;" />
                         <Span Text="2) Нажать на кнопку 'Удалить'." />
                     </FormattedString>

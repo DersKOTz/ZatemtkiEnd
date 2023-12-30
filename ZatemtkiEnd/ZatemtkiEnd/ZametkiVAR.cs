@@ -10,7 +10,6 @@ namespace ZatemtkiEnd
     {
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int Id { get; set; }
-
         public string Nazv { get; set; }
         public string Opis { get; set; }
         public DateTime Nach { get; set; }
